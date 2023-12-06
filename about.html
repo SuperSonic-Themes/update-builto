@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 data-title="The Advantages Of Our Company">The Advantages<br> Of Our Company</h1>
+    <style>
+        body{
+margin: 0;
+padding: 0;
+background: #ffeb3b;
+}
+h1{
+position: absolute;
+top: 50%;
+Left: 40%;
+transform: translate(-50%,-50%);
+margin: 0;
+padding: 0;
+font-family: verdana;
+color: #f00;
+font-size: 6em;
+Letter-spacing: 10px;
+text-align: center;
+text-transform:uppercase;
+transition: .5s;
+text-shadow: 0 5px 0 rgba(0, 0, 0, 1),
+0 10px 40px rgba(0, 0, 0, .2),
+0 20px 30px rgba(0, 0, 0, .2),
+0 30px 20px rgba(0, 0, 0, .2);
+}
+h1::before{
+content: attr(data-title);
+position: absolute;
+top: -5px;
+Left: 0;
+text-shadow: 0 2px 2px rgba(0,0,0,.5);
+color: #ffc187;
+transition: .5s;
+}
+
+h1::after{
+content: attr(data-title);
+position: absolute;
+top: -10px;
+Left: 0;
+text-shadow: 0 2px 2px rgba(0,0,0,.5);
+color: #fff;
+transition: .5s;
+}
+
+h1:hover::before {
+top:-10px;
+Left: 10px;
+}
+h1:hover::after{
+top: -20px;
+Left: 20px;
+}
+
+h1:hover{
+    text-shadow: -10px 10px 0 rgba(0, 0, 0, 1),
+0 10px 40px rgba(0, 0, 0, .2),
+0 20px 30px rgba(0, 0, 0, .5),
+120px 20px 20px rgba(0, 0, 0, .5);
+}
+    </style>
+</body>
+</html>

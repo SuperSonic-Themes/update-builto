@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+}
+
+nav{
+    margin-right: 70px;
+}
+nav a{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #eee;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    padding: 3px 1px;
+}
+
+.active{
+    border-color: aqua;
+}
+
+nav a:hover{
+    border-color: aqua;
+
+}
+
+ .text h3{
+    font-size: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+    position: relative;
+ }
+
+ .text h3::before{
+    content: 'SINCE 2003';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: black;
+    transition: 1s ease-in-out;
+ }
+
+ .text h3:hover::before{
+    width: 100%;
+ }
